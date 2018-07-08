@@ -1,0 +1,30 @@
+#back{
+    .container{
+        .row{
+            .col-md-12{
+                .main{
+                    position: relative;
+                    padding-left: 5%;
+                    p{
+                        color: rgb(199, 199, 199);
+                        cursor: pointer;
+                        transition: all 0.4s linear;
+                        &:hover{
+                            color: rgb(165, 162, 162);
+                        }
+                    }
+                    &::before{
+                        position: absolute;
+                        content: "\f060";
+                        font-family: "fontAwesome";
+                        top: 18%;
+                        left: 2%;
+                        font-size: 1.1ch;
+                        color: rgb(199, 199, 199);
+                        transition: all 0.4s linear;
+                    }
+                }
+            }
+        }
+    }
+}

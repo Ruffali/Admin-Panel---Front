@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Firs tDiagram</title>
+    <link rel="icon" href="assets/Images/icon/icon.png">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar-START -->
+    <section id="navbar">
+        <nav class="navbar navbar-light bg-light myNavbar">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <div class="select">
+                    <p>Select Entity</p>
+                    <span>
+                        <i class="fa fa-arrow-down"></i>
+                    </span>
+                </div>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+            <div class="icons">
+                <i class="fa fa-comment-alt"></i>
+                <i class="fa fa-user-alt"></i>
+                <i class="fa fa-bell"></i>
+            </div>
+            <div class="name">
+                <p>Rufat Aliyev</p>
+                <p>My Public Relation Data Group</p>
+            </div>
+            <div class="photo">
+                <img src="https://scontent.fgyd4-2.fna.fbcdn.net/v/t1.0-9/34342298_944908918967230_6062200206336720896_n.jpg?_nc_cat=0&oh=9011b45d31ed39ed92974007a0b2dd44&oe=5BD8452E"
+                    alt="">
+            </div>
+        </nav>
+    </section>
+    <!-- Navbar-END -->
+
+    <!-- NavbarLeft-START -->
+    <section id="navbarLeft">
+        <div class="main">
+            <i class="fas fa-caret-up"></i>
+            <i class="fas fa-home"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-file-alt"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-box-open"></i>
+            <i class="fas fa-chart-bar"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-cog"></i>
+        </div>
+    </section>
+    <!-- NavbarLeft-END -->
+
+    <!-- Back-START -->
+    <section id="back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main">
+                        <p>Back to Search</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Back-END -->
+
+    <!-- BigPart-START -->
+    <section id="bigPart">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="myCard">
+                        <div class="cardHeader">
+                            <p>Your List</p>
+                        </div>
+                        <div class="sound">
+                            <span>
+                                <i class="fas fa-volume-up"></i>
+                            </span>
+                            <p>My Content Marketing Influces</p>
+                        </div>
+                        <div class="write">
+                            <span>
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <p>Top Publishers</p>
+                        </div>
+                        <div class="mountine">
+                            <span>
+                                <i class="fas fa-archway"></i>
+                            </span>
+                            <p>2018 Blogger Launch</p>
+                        </div>
+                        <div class="fashoin">
+                            <span>
+                                <i class="fas fa-sync-alt"></i>
+                            </span>
+                            <p>Fashion Bloggers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="width:100%;">
+                        <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                            <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                            </div>
+                            <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                            </div>
+                        </div>
+                        <canvas id="canvas" width="1408" height="703" class="chartjs-render-monitor" style="display: block; height: 563px; width: 1127px;"></canvas>
+                    </div>
+                    <div style="display: none;">
+                        <button id="randomizeData">Randomize Data</button>
+                        <button id="addDataset">Add Dataset</button>
+                        <button id="removeDataset">Remove Dataset</button>
+                        <button id="addData">Add Data</button>
+                        <button id="removeData">Remove Data</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="leftSide">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="header">
+                                            <p>HISTORY</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="day">
+                                            <p>Today</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="email">
+                                            <p>
+                                                <span>You</span> send them an email</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="photo">
+                                            <span>
+                                                <img src="https://assets.vogue.com/photos/5a0b9b8d642102394f8e9b0f/master/pass/chris-pine-photo.jpg" alt="">
+                                            </span>
+                                            <span>
+                                                <img src="https://assets.vogue.com/photos/5a0b9b8d642102394f8e9b0f/master/pass/chris-pine-photo.jpg" alt="">
+                                            </span>
+                                            <span>
+                                                <img src="https://assets.vogue.com/photos/5a0b9b8d642102394f8e9b0f/master/pass/chris-pine-photo.jpg" alt="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="open">
+                                            <span>
+                                                <img src="https://assets.vogue.com/photos/5a0b9b8d642102394f8e9b0f/master/pass/chris-pine-photo.jpg" alt="">
+                                            </span>
+                                            <p>
+                                                <span>Minh Pham</span> opened it</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row downRow">
+                                <div class="col-md-12">
+                                    <div class="rounds">
+                                        <div class="header">
+                                            <p>WORD CLOUD</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="design">
+                                                <div class="round1">Design</div>
+                                                <div class="round2">Usibility</div>
+                                                <div class="round3">Project</div>
+                                                <div class="round4">JS</div>
+                                                <div class="round5">Program</div>
+                                                <div class="round6">Loyality</div>
+                                                <div class="round7">TEST</div>
+                                                <div class="round8">NEW</div>
+                                                <div class="round9">UK</div>
+                                                <div class="round10">Team</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 rightCol-6">
+                            <div class="leftSide">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="header">
+                                            <p>GEOGRAPHIC</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="americanImage">
+                                            <img src="http://www.clker.com/cliparts/S/r/a/w/L/0/black-and-white-u-s-map.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 rightDownCol-12">
+                                    <div class="leftSideDown">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="header">
+                                                    <p>SUBJECTS</p>
+                                                </div>
+                                                <div class="design">
+                                                    <h6>Product Design</h6>
+                                                    <span>1280</span>
+                                                </div>
+                                                <div class="beauty">
+                                                    <h6>Beauty</h6>
+                                                    <span>888</span>
+                                                </div>
+                                                <div class="food">
+                                                    <h6>Food</h6>
+                                                    <span>262</span>
+                                                </div>
+                                                <div class="life">
+                                                    <h6>Domestic Lifestyle</h6>
+                                                    <span>960</span>
+                                                </div>
+                                                <div class="entertainment">
+                                                    <h6>Entertainment</h6>
+                                                    <span>356</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info">
+                        <div class="header">
+                            <p>Top influencers</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mainPhoto">
+                                    <img src="https://cdn.asme.org/wwwasmeorg/media/ASMEMedia/EngineeringTopics/AerospaceDefense/The-Next-Era-of-Human-Flight_01.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">
+                                    <p>Loc Ngo</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="infoIcon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mainPhoto">
+                                    <img src="https://media-exp2.licdn.com/media-proxy/ext?w=800&h=800&hash=BIVRl7LIG3AcNbzkOz2Lpx5E0tA%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0Ua9wlUK0Ask4uCCokL_9FVBTI7ZES-jWySt5dSBf3fgZsbbcLKlo1weZ19YwUZjIfLeEXKjR8_gNdCvKg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 secondPerson">
+                                <div class="name">
+                                    <p>Djon Rush</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="infoIcon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mainPhoto">
+                                    <img src="https://pbs.twimg.com/profile_images/679583305486872576/RG7SqSHh.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 thirdPerson">
+                                <div class="name">
+                                    <p>Emily Jason</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="infoIcon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mainPhoto">
+                                    <img src="https://www.elmhurst.edu/wp-content/uploads/2017/10/profile-rosalie-navarette.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 fourthPerson">
+                                <div class="name">
+                                    <p>Chirs Rice</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="infoIcon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="button">
+                                    <button type="button" class="btn rightButton">
+                                        <span class="rightSpan">SIGN UP</span>SIGN UP
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moreInfo">
+                        <div class="header">
+                            <p>Recent Activities</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mainPhoto">
+                                    <img src="https://cdn.asme.org/wwwasmeorg/media/ASMEMedia/EngineeringTopics/AerospaceDefense/The-Next-Era-of-Human-Flight_01.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="infophoto">
+                                    <p>
+                                        <span>Denise Romeo</span> retweet
+                                        <span>Danny John's</span> tweet</p>
+                                    <p>7/28/2015 at 7:47PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Please You can see me tonight: Anderson Cooper 360, CNN Tonight
+                                    <a href="https://www.linkedin.com/in/r%C3%BCf%C9%99t-%C9%99liyev/">https://www.linkedin.com/in/Rufat Aliyev/</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mainPhoto">
+                                    <img src="https://cdn.asme.org/wwwasmeorg/media/ASMEMedia/EngineeringTopics/AerospaceDefense/The-Next-Era-of-Human-Flight_01.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="infophoto">
+                                    <p>
+                                        <span>Denise Romeo</span> retweet
+                                        <span>Danny John's</span> tweet</p>
+                                    <p>7/28/2015 at 7:47PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Please You can see me tonight: Anderson Cooper 360, CNN Tonight
+                                    <a href="https://www.linkedin.com/in/r%C3%BCf%C9%99t-%C9%99liyev/">https://www.linkedin.com/in/Rufat Aliyev/</a>
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="image">
+                                        <img src="https://i.ytimg.com/vi/XRtkIcUX97w/maxresdefault.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="padding-bottom: 14%">
+                                <div class="col-md-3">
+                                    <div class="mainPhoto">
+                                        <img style="width: 62%; margin-top: -23%; margin-left: 64%" src="https://cdn.asme.org/wwwasmeorg/media/ASMEMedia/EngineeringTopics/AerospaceDefense/The-Next-Era-of-Human-Flight_01.jpg"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="infophoto">
+                                        <p>
+                                            <span>Jame Dane</span> this is interesting
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- BigPart-END -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>
